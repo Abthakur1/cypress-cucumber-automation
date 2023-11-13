@@ -1,2 +1,58 @@
-cypress-cucumber framework development notes
+cypress-cucumber framework developme
 
+Step 1:
+create package.json file 
+use command : npm -i init
+
+Step 2:
+intall cypress and add teh dependency in package.json
+command : npm install cypress --save-dev
+Latest version will be downloaded
+
+Step 3:
+Open the cypress
+command : npx cypress Open
+folder structure and default files added in the project:
+    1. cypress.config.js  : cypress configuration file for E2E testing
+    2. cypress\support\e2e.js  : support file the is bundled and loaded before each E2E Spec
+    3. cypress\support\command.js  : custom cypress command
+    4. cypress\fixtures\example.json  : example fixture file with the test data in json format
+
+Sample spec file : spec.cy.js
+
+Step 4:
+install cypress-cucumber-preprocessor
+command : npm i @badeball/cypress-cucumber-preprocessor
+
+Follow : https://github.com/badeball/cypress-cucumber-preprocessor/blob/HEAD/docs/readme.md
+
+Step 5:
+Add dependency for browserify
+ "@cypress/browserify-preprocessor": "latest",
+
+Step 6:
+Cypress configuration file setup for cucumber
+
+https://github.com/badeball/cypress-cucumber-preprocessor/blob/93eaacda05bb809c727961330cd42568c4e064bf/examples/browserify-cjs/cypress.config.js
+setupNodeEvents  -- event for running the testFiles
+
+Step 7:
+add cucumber plugin in the visual studio code
+
+Step 8: Create a folder for adding feature file and provide the path in specPattern in e2e 
+e.g. specPattern:'cypress/e2e/bdd/*.feature'
+
+Step 9: 
+
+
+support/e2e.js file: 
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+module.exports = (on, config)=> {
+    on('file:preprocessor', cucumber())
+}
+
+step 10: follow the guidelines to create step definition files
+
+Important : there should be a folder name for creating step definition file 
+with the same name as the feature file name
