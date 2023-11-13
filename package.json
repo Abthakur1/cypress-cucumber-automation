@@ -1,0 +1,27 @@
+{
+  "name": "cypress-cucumber-automation",
+  "version": "1.0.0",
+  "description": "cypress-cucumber-framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abthakur1/cypress-cucumber-automation.git"
+  },
+  "author": "Abhishek Thakur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abthakur1/cypress-cucumber-automation/issues"
+  },
+  "homepage": "https://github.com/Abthakur1/cypress-cucumber-automation#readme",
+  "devDependencies": {
+    "cypress": "^13.5.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^19.1.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
